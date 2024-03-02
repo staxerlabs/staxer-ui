@@ -1,0 +1,205 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "enum StaxerFactory.ContractType",
+				"name": "_type",
+				"type": "uint8"
+			},
+			{
+				"internalType": "address[]",
+				"name": "_waccounts",
+				"type": "address[]"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "_wpercentage",
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "address[]",
+				"name": "_caccounts",
+				"type": "address[]"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "_cpercentage",
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "string[]",
+				"name": "_tokenName",
+				"type": "string[]"
+			},
+			{
+				"internalType": "address[]",
+				"name": "_whitelistedAddress",
+				"type": "address[]"
+			},
+			{
+				"internalType": "bool",
+				"name": "_isWhiteList",
+				"type": "bool"
+			}
+		],
+		"name": "deployContract",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "safeAddress",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			}
+		],
+		"name": "OwnableInvalidOwner",
+		"type": "error"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "OwnableUnauthorizedAccount",
+		"type": "error"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "_contract",
+				"type": "address"
+			}
+		],
+		"name": "DeployedContract",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "getUserStruct",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "salaryContractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "capitalGainsContractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "valueAddedTaxContractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "returnsContractAddress",
+						"type": "address"
+					}
+				],
+				"internalType": "struct StaxerFactory.UserInformation",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
